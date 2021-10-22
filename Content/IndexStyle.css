@@ -1,0 +1,22 @@
+﻿#mid{
+    
+    background-color:grey;
+}
+#font{
+    font-size:large;
+}
+#tab{
+    background-color:aqua;
+}
+#create, #edit {
+    background-color: blanchedalmond;
+}
+
+#detail,#delete{
+    background-color:darksalmon;
+}
+#emp {
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
