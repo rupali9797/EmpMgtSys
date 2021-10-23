@@ -46,6 +46,14 @@
             @Html.DisplayFor(model => model.BirthDate)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.DepartmentId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DepartmentId)
+        </dd>
+
     </dl>
 
     @using (Html.BeginForm())
@@ -53,8 +61,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Delete" class="btn btn-default" /> 
+            <button class="btn btn-success"> @Html.ActionLink("Back to List", "Index")</button>  
         </div>
     }
 </div>

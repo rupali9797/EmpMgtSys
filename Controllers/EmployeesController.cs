@@ -44,7 +44,7 @@ namespace EmpMgtSys.Controllers
         public ActionResult Create()
         {
             Debug.WriteLine($"Trying to create employee");
-            ViewBag.DepartmentId = new SelectList(db.Department, "Id", "Name");
+            ViewBag.DepartmentId = new SelectList(db.Department, "DepartmentId", "Name");
             return View();
         }
 
@@ -53,7 +53,7 @@ namespace EmpMgtSys.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,FieldExperience,PhoneNumber,BirthDate")] Employee employee)
+        public ActionResult Create([Bind(Include = "Id,Name,FieldExperience,PhoneNumber,BirthDate,DepartmentId")] Employee employee)
         {
             Debug.WriteLine($"Trying to create employee");
             if (ModelState.IsValid)
@@ -63,7 +63,7 @@ namespace EmpMgtSys.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.DepartmentId = new SelectList(db.Department, "Id", "Name", employee.DepartmentId);
+            ViewBag.DepartmentId = new SelectList(db.Department, "DepartmentId", "Name", employee.DepartmentId);
 
             return View(employee);
         }
@@ -88,7 +88,7 @@ namespace EmpMgtSys.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,FieldExperience,PhoneNumber,BirthDate")] Employee employee)
+        public ActionResult Edit([Bind(Include = "Id,Name,FieldExperience,PhoneNumber,BirthDate,DepartmentId")] Employee employee)
         {
             if (ModelState.IsValid)
             {

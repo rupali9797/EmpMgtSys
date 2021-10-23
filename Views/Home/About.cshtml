@@ -1,7 +1,45 @@
 ﻿@{
     ViewBag.Title = "About";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<link href="@Url.Content("~/Content/IndexStyle.css")" rel="stylesheet" type="text/css" />
 
-<p>Use this area to provide additional information.</p>
+<center style=" text-shadow: 2px 2px 4px #000000; "><h1>About Of Zensar</h1></center>
+<html>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" id="img">
+
+                <img src="~/image/zens1.png" width="100%" height="190px" />
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row" id="mid">
+        <div class="col-md-6">
+
+            <h2>Zensar</h2>
+            <p id="font">
+                Zensar is a global organization which conceptualizes, builds, and manages digital products through experience design,
+                data engineering, and advanced ...
+                We believe technology exists to serve our evolving human needs,
+                so we put people at the heart of everything we do. Always going above and beyond to deliver dependable technology and solutions,
+                we ensure our clients are equipped to take on the challenges of today and tomorrow.
+                We are a technology consulting and services company with 10,000 associates in 33 global locations.
+                More than 130 leading enterprises depend on our expertise to be more disruptive, agile, and competitive.
+                We focus on conceptualizing, designing, engineering, marketing and managing digital products and experiences
+                for high-growth companies
+            </p>
+
+        </div>
+        <div class="col-md-6">
+
+            <img src="~/image/zens2.jfif" height="500px" width="700px" />
+        </div>
+    </div>
+
+</body>
+</html>

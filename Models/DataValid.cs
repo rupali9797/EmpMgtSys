@@ -11,7 +11,7 @@ namespace EmpMgtSys.Models
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
             DateTime _dateJoin = Convert.ToDateTime(value);
-            if (_dateJoin >= DateTime.Now)
+            if (_dateJoin <= DateTime.Now)
             {
                 return ValidationResult.Success;
             }

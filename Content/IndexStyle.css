@@ -5,8 +5,8 @@
 #font{
     font-size:large;
 }
-#tab{
-    background-color:aqua;
+#tab {
+    background-color: #f5f0f0;
 }
 #create, #edit {
     background-color: blanchedalmond;
@@ -18,5 +18,10 @@
 #emp {
     color: white;
     text-shadow: 2px 2px 4px #000000;
+}
+
+#ind {
+    color: white;
+    text-shadow: 0 0 3px #FF0000;
 }
 
